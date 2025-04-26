@@ -9,22 +9,19 @@ import math
 def potencial(x,y):
 
     f= x**y
-    print(f"Este es el resultado de la función: {f}")
     return f
 
 
-def volumen_esfera(r1):
+def volumen_total(r1,r2,h):
 
     V_esfera= math.pi * potencial(r1,3) * 4/3
     print("Este es el volumen de la esfera: ", V_esfera)
-    return V_esfera
-
-volumen_esfera(3)
-
-def volumen_cono(r2,h):
-
     V_cono= math.pi * potencial(r2,2) * 1/3 * h
-    print("Este es el volumen de la esfera: ", V_cono)
-    return V_cono
+    print("Este es el volumen del cono: ", V_cono)
+    VOLUMEN_TOTAL = V_esfera + V_cono
+    return VOLUMEN_TOTAL
 
-volumen_cono(4, 7)
+volumen_total(3,4,9/2)
+print("El volumen total es: ", volumen_total(3,4,9/2))
+
+
