@@ -77,7 +77,7 @@ def carne_total(gallina, gallos,poliitos):
 N = int(input("numero de gallinas: "))
 M = int(input("numero de gallos: "))
 k = int(input("numero de pollitos: "))
-print("la cantidad de carne de aves que hay es:", carne_total(N,M,k))
+print("la cantidad de carne de aves que hay en kg es:", carne_total(N,M,k), "kg")
 print(" ")
 print("II. Mandados.")
 print(" ")
@@ -85,8 +85,16 @@ print(" ")
 def Deuda(panes, bolsas_leche, huevos):
     a_pagar= 300 * panes + 3300 * bolsas_leche + 350 * huevos
     return a_pagar
-
 P = int(input("numero de panes: "))
 MB = int(input("numero de bolsas de leche: "))
 H = int(input("numero de huevos: "))
-print("El total a pagar es: ", Deuda(P,M,H))
+print("El total a pagar es: $", Deuda(P,M,H))
+
+B= int(input(" Billete que me dio mi mamá: $"))
+vueltas= Deuda(P,M,H) - B
+recibo=  B - Deuda(P,M,H)
+if B >= Deuda(P,M,H):
+    print("Las vueltas son: $", vueltas)
+else:
+    print("No alcanza, Faltan: $:", -1*recibo, "hoy no se fia, mañana si")
+print(" ")
