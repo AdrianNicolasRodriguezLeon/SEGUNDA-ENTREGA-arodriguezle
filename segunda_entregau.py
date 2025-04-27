@@ -4,6 +4,7 @@
 
 ###### 
 print("1. Volumen total del objeto.")
+print(" ")
 import math
 
 def potencial(x,y):
@@ -62,3 +63,30 @@ d=float(input("Altura del segundo rectángulo "))
 r4=float(input("Radio del segundo círculo:"))
 print("EN TOTAL:")
 print("EL área Lateral del carro es: ", area_total2(b,a,r3,c,d,r4))
+
+print(" ")
+print(" ")
+
+print("4. Problemas.")
+print(" ")
+print("I. Cantidad de carne.")
+print(" ")
+def carne_total(gallina, gallos,poliitos):
+    C_total= 6 * gallina + 7 * gallos + 1 * poliitos
+    return C_total
+N = int(input("numero de gallinas: "))
+M = int(input("numero de gallos: "))
+k = int(input("numero de pollitos: "))
+print("la cantidad de carne de aves que hay es:", carne_total(N,M,k))
+print(" ")
+print("II. Mandados.")
+print(" ")
+
+def Deuda(panes, bolsas_leche, huevos):
+    a_pagar= 300 * panes + 3300 * bolsas_leche + 350 * huevos
+    return a_pagar
+
+P = int(input("numero de panes: "))
+MB = int(input("numero de bolsas de leche: "))
+H = int(input("numero de huevos: "))
+print("El total a pagar es: ", Deuda(P,M,H))
