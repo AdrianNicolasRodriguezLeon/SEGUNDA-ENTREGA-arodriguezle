@@ -98,3 +98,29 @@ if B >= Deuda(P,M,H):
 else:
     print("No alcanza, Faltan: $:", -1*recibo, "hoy no se fia, mañana si")
 print(" ")
+
+print("III. Intereses.")
+print(" ")
+def interes(tiempo, Vinicial, tasa):
+    I_Compuesto = Vinicial * ((1 + tasa)**tiempo)
+    return I_Compuesto
+
+
+P1 = int(input("Capital inicial: $"))
+print("El monto final a pagar es: $", interes(2, P1, 0.03)) 
+
+print(" ")
+print("IV. Contagios por covid.")
+print(" ")
+
+def contagios( dias, contagios_actuales):
+    contagios_totales= contagios_actuales * (2**dias)
+    return contagios_totales
+
+Di = int(input("Dias que pasaron: "))
+Co = int(input("Contagios actuales: "))
+print("El total de contagios por covid es: ", contagios(Di, Co), "personas")
+
+print(" ")
+print("  FIN        ")
+print("   ")
